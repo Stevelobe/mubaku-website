@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<!-- Bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+    /* Custom styles */
+    .btn-custom {
+        background-color: #25D366; /* WhatsApp green */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+        background-color: #128C7E; /* Darker WhatsApp green on hover */
+    }
+
+    .service-details ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .service-details li {
+        padding: 10px;
+        font-size: 1.1rem;
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+    .service-details li:last-child {
+        border-bottom: none;
+    }
+
+    .content {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 30px;
+    }
+
+    h1 {
+        color: #343a40;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: #6c757d;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="content text-center">
+        <h1>MUBAKU Real Estate Services</h1>
+        <p>
+            At MUBAKU Real Estate, we offer comprehensive services to help you buy, sell, and manage properties in Cameroon. 
+            Whether you're looking for a home, office space, or land, we have the expertise and resources to make the process 
+            seamless and stress-free.
+        </p>
+
+        <p>Our services include:</p>
+        <div class="service-details">
+            <ul>
+                <li><strong>Project Management:</strong> We oversee every stage of your real estate project, from planning and construction to final delivery, ensuring timely and quality results.</li>
+                <li><strong>Property Advertisement:</strong> We advertise your properties through various channels, reaching potential buyers and tenants for quick and effective transactions.</li>
+                <li><strong>Buying/Selling Landed Properties:</strong> Whether you're buying or selling property, we assist with negotiations, paperwork, and market analysis to ensure the best deal.</li>
+            </ul>
+        </div>
+        <p>Our experienced team of real estate professionals is here to guide you every step of the way, making sure you get the best outcomes in the ever-changing property market.</p>
+
+        <!-- WhatsApp link to apply with icon -->
+        <a class="btn-custom" href="https://chat.whatsapp.com/Lgdrbq1XmaIE3GQ0k1J9pp" target="_blank">
+            <i class="fab fa-whatsapp"></i> Join our WhatsApp to Apply
+        </a>
+
+        <br><br>
+    </div>
+</div>
+
+{% endblock %}

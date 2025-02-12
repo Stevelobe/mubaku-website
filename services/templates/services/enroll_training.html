@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll in Training</title>
+</head>
+<body>
+    <h1>Enroll in {{ training.name }}</h1>
+    <p>Details: {{ training.description }}</p>
+
+    <!-- Enrollment Form (Example) -->
+    <form method="post">
+        {% csrf_token %}
+        <!-- Add any additional fields for enrollment -->
+        <button type="submit">Enroll Now</button>
+    </form>
+</body>
+</html>

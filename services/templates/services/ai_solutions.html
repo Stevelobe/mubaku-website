@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<!-- Bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0">
+                <div class="card-body text-center">
+                    <h1 class="fw-bold">AI Solutions</h1>
+                    <p class="lead">
+                        MUBAKU provides cutting-edge AI solutions to help businesses automate processes, enhance decision-making, 
+                        and improve customer experiences. Our AI-driven technologies are designed to bring tangible results and
+                        boost business efficiency.
+                    </p>
+                    
+                    <h3 class="fw-bold">Our Expertise Includes:</h3>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item"><strong>AI-Powered Analytics:</strong> Leverage data analytics to gain valuable insights and make data-driven decisions that can significantly improve your business strategy.</li>
+                        <li class="list-group-item"><strong>Custom Machine Learning Models:</strong> Tailored solutions built to solve specific problems within your business, from predictive analysis to automation and more.</li>
+                        <li class="list-group-item"><strong>AI Chatbots and Virtual Assistants:</strong> Enhance customer interactions with intelligent chatbots and virtual assistants, improving efficiency and customer satisfaction.</li>
+                        <li class="list-group-item"><strong>Automation Services:</strong> Streamline business operations by automating repetitive tasks, saving time and reducing human error.</li>
+                    </ul>
+                    
+                    <p class="mt-3">Transform your business today with MUBAKU's AI Solutions, and unlock new opportunities for growth and efficiency.</p>
+                    
+                    <!-- WhatsApp link to apply with icon -->
+                    <a class="btn btn-success mt-3" href="https://chat.whatsapp.com/Fxde4F7eFQeCGjbeKKtceM" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Join our WhatsApp to Apply
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

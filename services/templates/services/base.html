@@ -1,0 +1,340 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUBAKU HOLDINGS</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+   <link rel="icon" type="image/png" href="{% get_media_prefix %}images/logo2.png">
+
+
+    <style>
+        /* Background styling */
+        body {
+            background-image: url("{% get_media_prefix %}images/al5.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            color: black;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar */
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar-brand, .nav-link {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .navbar-dark .navbar-brand, 
+        .navbar-dark .nav-link {
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .hero-content h1 {
+            font-weight: bold;
+            font-size: 3rem;
+            color: white;
+            animation: fade 3s infinite;
+        }
+
+        @keyframes fade {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* Services & Solutions Section */
+        .services-section {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 60px 0;
+        }
+
+        .service-box {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-box i {
+            font-size: 50px;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        /* Hero Section styles */
+        .hero-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            padding: 5rem 0;
+            
+        }
+
+        .hero-content {
+            max-width: 700px;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark background for better readability */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content h1 {
+            font-weight: bold;
+            font-size: 3rem;
+            color: lightgreen; /* Gold color for headings */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content p {
+            font-weight: normal;
+            font-size: 1.2rem;
+            color: #E8E8E8; /* Light text color */
+            margin-top: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Section Content */
+        .about-section {
+            background-color: black(255, 255, 255, 0.85);
+            padding: 60px 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            color:black;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            color: black;
+            line-height: 1.6;
+            margin-top: 20px;
+            text-align: justify;
+        }
+
+        .service-box h4 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Services Section styles */
+        .services-section h2 {
+            font-weight: bold;
+            font-size: 2.5rem; /* Increase heading size */
+            color: black;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Added text shadow */
+        }
+
+        .service-card {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05); /* Slightly enlarge the card */
+            background-color: #495057; /* Change background color */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow */
+        }
+
+        .service-card h3 {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Added text shadow */
+        }
+
+        .service-card p {
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Added text shadow */
+        }
+
+        .service-card a {
+            text-decoration: none; /* Remove underline */
+        }
+
+        /* Button styles */
+        .btn-learn-more {
+            font-weight: bold;
+            color: white;
+            background-color: lightgreen;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-learn-more:hover {
+            background-color: #138496;
+        }
+
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Marquee */
+        .marquee-container {
+            background-color: #343a40;
+            color: white;
+            padding: 5px 0;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(50%); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Marquee Section -->
+    <div class="marquee-container">
+        <div class="marquee">
+            <span>📍 Location: Yaounde, Cameroon | ☎️ Contact: +237 650 123 456 | 🌟 Services: Agribusiness, AI-Powered Analytics, Financial Growth Strategies</span>
+        </div>
+    </div>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
+                <img src="{% get_media_prefix %}images/logo2.png" alt="Logo">
+                MUBAKU HOLDINGS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'home' %}">
+                            <i class="fa-solid fa-house"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'services' %}">
+                            <i class="fa-solid fa-list"></i> Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">
+                            <i class="fa-solid fa-info-circle"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contacts' %}">
+                            <i class="fa-solid fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+                
+                <style>
+                    .nav-link {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        transition: color 0.3s ease-in-out;
+                    }
+                
+                    .nav-link:hover {
+                        color: #007bff;
+                    }
+                </style>
+            </div>
+        </div>
+    </nav>
+{% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 MUBAKU HOLDINGS. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <!-- Rotating Text Script -->
+    <script>
+        const rotatingText = ["Welcome to MUBAKU HOLDINGS!", "Empowering Businesses with AI", "Innovative Solutions for Agribusiness"];
+        let index = 0;
+        const rotatingElement = document.getElementById('rotatingText');
+
+        function rotateText() {
+            rotatingElement.textContent = rotatingText[index];
+            index = (index + 1) % rotatingText.length;
+        }
+
+        setInterval(rotateText, 3000);
+    </script>
+</body>
+</html>

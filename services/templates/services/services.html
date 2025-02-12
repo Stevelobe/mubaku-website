@@ -1,0 +1,61 @@
+<!-- services/templates/services/services.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - MUBAKU</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                MUBAKU HOLDINGS
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Our Services</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="path/to/image.jpg" class="card-img-top" alt="Tech Fintech">
+                    <div class="card-body">
+                        <h5 class="card-title">Tech/Fintech Solutions</h5>
+                        <p class="card-text">Explore our cutting-edge tech and fintech solutions for businesses in Cameroon.</p>
+                        <a href="{% url 'tech_fintech' %}" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="path/to/image.jpg" class="card-img-top" alt="Consultancy">
+                    <div class="card-body">
+                        <h5 class="card-title">Consultancy</h5>
+                        <p class="card-text">We provide expert consultancy for all tech-related challenges your business faces.</p>
+                        <a href="{% url 'consultancy' %}" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="path/to/image.jpg" class="card-img-top" alt="Real Estate">
+                    <div class="card-body">
+                        <h5 class="card-title">Real Estate</h5>
+                        <p class="card-text">Our real estate services are tailored to meet the growing demands of modern businesses.</p>
+                        <a href="{% url 'real_estate' %}" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-center text-white py-3">
+        <p>&copy; 2025 MUBAKU HOLDINGS. All rights reserved.</p>
+    </footer>
+</body>
+</html>

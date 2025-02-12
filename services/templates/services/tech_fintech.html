@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<!-- Bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow-lg border-0" style="max-width: 900px;">
+        <div class="card-body p-5">
+            <h1 class="fw-bold text-center">Tech/Fintech Solutions</h1>
+            <p class="lead text-center">
+                At MUBAKU, we specialize in providing tech and fintech solutions designed to help businesses grow and thrive in the modern digital landscape. Our team offers a wide range of services aimed at enhancing the efficiency and scalability of businesses in Cameroon and beyond. Whether you're looking to develop custom software, integrate digital payment systems, or seek expert tech consultancy, we are here to support you every step of the way.
+            </p>
+            <div class="service-details mt-4">
+                <h3 class="fw-bold">Our Expertise Includes:</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item border-0"><strong>Custom Software Development:</strong> We design and develop tailored software solutions that align with your business goals, ensuring streamlined operations and growth.</li>
+                    <li class="list-group-item border-0"><strong>Mobile Payment Solutions:</strong> Our mobile payment systems allow businesses to process payments quickly, securely, and seamlessly, enhancing customer experience.</li>
+                    <li class="list-group-item border-0"><strong>Tech Consultancy Services:</strong> We provide expert advice on technology strategy, IT infrastructure, and digital transformation, helping businesses adapt to the changing tech landscape.</li>
+                    <li class="list-group-item border-0"><strong>System Integration:</strong> We integrate various business systems to ensure smooth data flow, improving operational efficiency and decision-making capabilities.</li>
+                </ul>
+                <p class="mt-3">Our services are designed to help businesses in various industries leverage technology for improved performance, growth, and sustainability. With years of experience in the tech and fintech sectors, we bring innovative solutions that cater to your unique needs.</p>
+            </div>
+            
+            <!-- WhatsApp link to join with icon -->
+            <div class="text-center mt-4">
+                <a class="btn btn-success btn-lg" href="https://chat.whatsapp.com/Eyx9YU6qJxRC2A7mIViukO" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Join our WhatsApp to Apply
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+{% endblock %}
