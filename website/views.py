@@ -15,6 +15,20 @@ def services(request):
 def about(request):
     return render(request, 'about.html')
 
+def funding(request):
+    return render(request, 'funding.html')
+
+def training_view(request):
+    return render(request, 'training.html')
+
+def business_training(request):
+    return render(request, 'business_training.html')
+
+def tech_training(request):
+    return render(request, 'tech_training.html')
+
+def leadership_training(request):
+    return render(request, 'leadership_training.html')
 
 def contacts(request):
     if request.method == 'POST':

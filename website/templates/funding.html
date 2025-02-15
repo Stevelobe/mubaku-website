@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url("{% get_media_prefix %}images/abs.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        color: white;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .navbar-dark .navbar-brand,
+    .navbar-dark .nav-link {
+        color: white;
+    }
+
+    .navbar-brand img {
+        height: 50px;
+        width: auto;
+        margin-right: 10px;
+    }
+
+    .funding-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 50px 0;
+    }
+
+    .funding-container {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 40px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 1000px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .funding-container h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .funding-container p {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    .funding-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .funding-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .funding-item h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .funding-item p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .funding-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-link {
+        display: inline-block;
+        padding: 10px 20px;
+        background: gray;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn-link:hover {
+        background: skyblue;
+        transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+        .funding-list {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+
+<div class="funding-section">
+    <div class="funding-container">
+        <h1>Funding Opportunities</h1>
+        <p>Explore various funding opportunities available to help your startup grow and succeed.</p>
+
+        <div class="funding-list">
+            <div class="funding-item">
+                <h3>Startup Grants 2025</h3>
+                <p>Apply for up to <strong>$10,000</strong> in funding for your startup.</p>
+                <a href="https://example.com/startup-grants" target="_blank" class="btn-link">View Details</a>
+            </div>
+
+            <div class="funding-item">
+                <h3>Women in Business Fund</h3>
+                <p>Exclusive funding for <strong>female entrepreneurs</strong>.</p>
+                <a href="https://example.com/women-business-fund" target="_blank" class="btn-link">View Details</a>
+            </div>
+
+            <div class="funding-item">
+                <h3>Youth Empowerment Grants</h3>
+                <p>Funding for <strong>young entrepreneurs under 30</strong>.</p>
+                <a href="https://example.com/youth-grants" target="_blank" class="btn-link">View Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
