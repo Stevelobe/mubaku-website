@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="container mt-5">
+    <!-- Success Messages -->
+    {% if messages %}
+    <div class="container mt-3">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="bg-light p-5 rounded shadow-sm">
+        <h1 class="text-center fw-bold text-dark">Mubaku Boot Camp</h1>
+        <p class="text-center text-secondary">Empowering individuals with intensive hands-on training.</p>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <img src="{% get_media_prefix %}images/boot.jpg" class="card-img-top rounded-top" alt="Boot Camp Training">
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-dark">About Our Boot Camp</h3>
+                <p class="text-secondary">
+                    Mubaku Boot Camp provides participants with intensive, practical training in technology, 
+                    business development, and leadership.
+                </p>
+                <ul class="text-dark">
+                    <li>💻 Training on Concept Note Writing</li>
+                    <li>📊 Training on Business Plan Writing</li>
+                    <li>🎯 Training on Grant Writing</li>
+                    <li>📢 Pitch Sessions</li>
+                    <li>🌿 Procedures on how to apply for fundings</li>
+                </ul>
+                <!-- Enroll Now Button triggers modal -->
+                <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Enrollment Modal -->
+<div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="enrollModalLabel">Boot Camp Enrollment Form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="{% url 'enroll' %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" name="full_name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="program" class="form-label">Select Program</label>
+                        <select class="form-select" id="program" name="program" required>
+                            <option value="Concept Note Writing">Concept Note Writing</option>
+                            <option value="Business Plan Writing">Business Plan Writing</option>
+                            <option value="Grant Writing">Grant Writing</option>
+                            <option value="Pitch Sessions">Pitch Sessions</option>
+                            <option value="Funding Procedures">Funding Procedures</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Submit Enrollment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Auto-refresh if success message appears -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var successMessage = document.querySelector(".alert-success");
+    if (successMessage) {
+        setTimeout(function () {
+            location.reload();  // Refresh page after 3 seconds
+        }, 3000);
+    }
+});
+</script>
+
+{% endblock %}

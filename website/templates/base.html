@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUBAKU HOLDINGS</title>
+    <title>Mubaku High-Tech Incorporation</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -12,12 +12,12 @@
     
     <style>
         body {
-        background-image: url("{% get_media_prefix %}images/abs.jpg");
+        background-image: url("{% get_media_prefix %}images/3.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         height: 100vh;
-        color: white;
+        color: black;
         font-family: 'Arial', sans-serif;
     }
         /* Navbar */
@@ -59,7 +59,7 @@
     <!-- Marquee Section -->
     <div class="marquee-container bg-dark text-white py-2">
         <marquee behavior="scroll" direction="left">
-            📍 Location: Yaounde, Cameroon | ☎️ Contact: +237 650 123 456 | 🌟 Services: Agribusiness, AI-Powered Analytics, Financial Growth Strategies
+            📍 Location: Yaounde, Cameroon | ☎️ Contact: +237 671 487 555 | 🌟 Services: Agribusiness, AI-Powered Analytics, Financial Growth Strategies
         </marquee>
     </div>
 
@@ -68,7 +68,7 @@
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
                 <img src="{% get_media_prefix %}images/logo2.png" alt="Logo">
-                MUBAKU HOLDINGS
+                Mubaku High-Tech Incorporation
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -98,19 +98,21 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'funding' %}">Funding Links</a>
                     </li>
-
-                    <!-- Dropdown Menu for Training -->
+                  
+                    
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="trainingDropdown" role="button" data-bs-toggle="dropdown">
-                            <i class="fa-solid fa-graduation-cap"></i> Training
+                        <a class="nav-link dropdown-toggle" href="#" id="trainingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Training
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{% url 'leadership_training' %}">Leadership Training</a></li>
-                            <li><a class="dropdown-item" href="{% url 'business_training' %}">Business Growth Strategies</a></li>
-                            <li><a class="dropdown-item" href="{% url 'tech_training' %}">Tech Training</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="trainingDropdown">
+                            <li><a class="dropdown-item" href="{% url 'boot_camp' %}">Boot Camp</a></li>
+                            <li><a class="dropdown-item" href="{% url 'seminars' %}">Seminars</a></li>
+                            <li><a class="dropdown-item" href="{% url 'workshops' %}">Workshops</a></li>
+                            <li><a class="dropdown-item" href="{% url 'incubators' %}">Incubators</a></li>
                         </ul>
                     </li>
-
+ 
+                    
                 </ul>
             </div>
         </div>

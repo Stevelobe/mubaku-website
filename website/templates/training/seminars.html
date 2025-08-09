@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="container mt-5">
+    <div class="bg-light p-5 rounded shadow-sm">
+        <h1 class="text-center fw-bold text-dark">Mubaku Seminars</h1>
+        <p class="text-center text-secondary">Expert-led seminars to broaden your knowledge.</p>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h3 class="text-dark">Why Attend Our Seminars?</h3>
+                <p class="text-secondary">
+                    Mubaku organizes industry-leading seminars featuring top professionals and subject-matter experts.
+                </p>
+                <ul class="text-dark">
+                    <li>📌 Business Innovation</li>
+                    <li>📌 Financial Literacy</li>
+                    <li>📌 Cybersecurity Awareness</li>
+                    <li>📌 AI & Emerging Technologies</li>
+                </ul>
+                <a href="#" class="btn btn-success mt-3">Join Our Next Seminar</a>
+            </div>
+            <div class="col-md-6">
+                <img src="{% get_media_prefix %}images/sem.jpg" class="img-fluid rounded" alt="Mubaku Seminars">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

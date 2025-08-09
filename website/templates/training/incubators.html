@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="container mt-5">
+    {% if messages %}
+    <div class="container mt-3">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <div class="bg-light p-5 rounded shadow-sm">
+        <h1 class="text-center fw-bold text-dark">Mubaku Incubators</h1>
+        <p class="text-center text-secondary">Nurturing startups and entrepreneurs for long-term success.</p>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h3 class="text-dark">About Our Incubators</h3>
+                <p class="text-secondary">
+                    The Mubaku Incubator program helps startups and entrepreneurs turn their ideas into successful businesses.
+                </p>
+                <ul class="text-dark">
+                    <li>🚀 3 Months training on Business Development and Setting up</li>
+                    <li>💰 Business plan development by each participant</li>
+                    <li>🏢 Creation of Business Enterprises and handing over to participants</li>
+                    <li>🚀 Follow-up to ensure each participant starts and succeeds in their Business with Mubaku's support</li>
+                </ul>
+                <!-- Button to trigger the Modal -->
+                <!-- <a href="#" class="btn btn-danger mt-3" data-toggle="modal" data-target="#applyModal">Apply Now</a> -->
+                <button class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button>
+            </div>
+            <div class="col-md-6">
+                <img src="{% get_media_prefix %}images/inc.jpg" class="img-fluid rounded" alt="Mubaku Incubator">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for the application form -->
+<div class="modal fade" id="applyModal" tabindex="-1" role="dialog" aria-labelledby="applyModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="applyModalLabel">Apply for Mubaku Incubator</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Application Form -->
+                <form method="POST" action="{% url 'incubator_apply' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="full_name">Full Name</label>
+                        <input type="text" class="form-control" id="full_name" name="full_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="business_idea">Business Idea</label>
+                        <textarea class="form-control" id="business_idea" name="business_idea" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var successMessage = document.querySelector(".alert-success");
+        if (successMessage) {
+            setTimeout(function () {
+                location.reload();  // Refresh page after 3 seconds
+            }, 3000);
+        }
+    });
+    </script>
+
+{% endblock %}

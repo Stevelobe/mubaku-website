@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import Enrollment
+from .models import IncubatorApplication
+from .models import Workshops
 
-# Register your models here.
+admin.site.register(Enrollment)
+admin.site.register(IncubatorApplication)
+admin.site.register(Workshops)
