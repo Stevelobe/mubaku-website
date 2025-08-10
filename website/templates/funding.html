@@ -4,13 +4,16 @@
 {% block content %}
 <style>
     body {
-        background-image: url("{% get_media_prefix %}images/3.jpg");
+        /* background-image: url("{% get_media_prefix %}images/3.jpg"); */
+        /* Background image removed */
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 100vh;
         color: white;
         font-family: 'Arial', sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        position: relative;
     }
 
     .navbar-dark .navbar-brand,
@@ -28,8 +31,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        padding: 50px 0;
+        /* Remove fixed height to avoid footer overlap */
+        /* height: 100vh; */
+        min-height: 70vh; /* Ensure enough vertical space */
+        padding: 80px 20px 120px; /* Extra bottom padding to avoid footer interference */
+        box-sizing: border-box;
     }
 
     .funding-container {
@@ -69,6 +75,7 @@
         max-width: 300px;
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        color: white;
     }
 
     .funding-item h3 {
@@ -80,6 +87,7 @@
     .funding-item p {
         font-size: 1.1rem;
         margin-bottom: 20px;
+        line-height: 1.4;
     }
 
     .funding-item:hover {
@@ -119,17 +127,15 @@
         <div class="funding-list">
             <div class="funding-item">
                 <h3>Visa Accelerator Program 2025 for African Startups (Over $200,000 Value)</h3>
-                <p>This groundbreaking initiative connects Africa’s brightest minds with experienced mentors, <br>cutting-edge technology, </br>and unparalleled investment opportunities<strong><br>Deadline: March 15, 2025</br</strong></p>
+                <p>This groundbreaking initiative connects Africa’s brightest minds with experienced mentors, <br>cutting-edge technology, <br><strong>Deadline: March 15, 2025</strong></br></p>
                 <a href="https://africa.visa.com/visa-everywhere/innovation/visa-accelerator.html#1" target="_blank" class="btn-link">View Details</a>
             </div>
 
             <div class="funding-item">
                 <h3>Tony Elumelu Foundation (TEF) Entrepreneurship Programme 2025 For African Entrepreneurs (Up to $5000 Grant).</h3>
-                <p>Successful applicants will receive 12 weeks of intensive online training, access to a world-class mentor, and US$5,000 in seed capital to prove the concept, plus access to further funding.<br>Deadline: March 1, 2025</br></p>
+                <p>Successful applicants will receive 12 weeks of intensive online training, access to a world-class mentor, and US$5,000 in seed capital to prove the concept, plus access to further funding.<br><strong>Deadline: March 1, 2025</strong></br></p>
                 <a href="https://climatestoryunit.org/apply/" target="_blank" class="btn-link">View Details</a>
             </div>
-
-            
         </div>
     </div>
 </div>

@@ -3,17 +3,32 @@
 {% load static %}
 
 <!-- Our Mission Section -->
-<section id="mission" class="py-5">
+<section id="mission" class="py-5 position-relative">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 mb-4">
-                <h2 class="display-4 fw-bold text-primary">Our Mission</h2>
-                <p class="fs-5 text-muted">Our mission is to empower businesses to adapt and thrive in a rapidly evolving digital world by delivering innovative, reliable, and scalable technology solutions. We are committed to driving digital transformation through cutting-edge technologies, strategic partnerships, and customer-centric solutions that enhance efficiency, productivity, and growth. By fostering innovation, continuous learning, and excellence, we aim to equip businesses with the tools and knowledge they need to stay ahead in an ever-changing global landscape.
-
-                    We believe in leveraging emerging technologies such as artificial intelligence, cloud computing, and cybersecurity to create sustainable and future-proof solutions. Our goal is to bridge the gap between technology and business needs, ensuring seamless integration and maximum impact. Through collaboration, integrity, and a passion for progress, we strive to create an ecosystem where businesses not only survive but thrive in the digital era.</p>
+        <div class="row align-items-center flex-column-reverse flex-lg-row">
+            <!-- Text Column -->
+            <div class="col-lg-6 col-md-12 mt-4 mt-lg-0">
+                <div style="
+                    background: rgba(255, 255, 255, 0.9);
+                    padding: 2rem;
+                    border-radius: 0.5rem;
+                    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+                ">
+                    <h2 class="display-5 fw-bold text-primary text-center text-lg-start">Our Mission</h2>
+                    <p class="fs-6 fs-md-5 text-muted text-center text-lg-start">
+                        Our mission is to empower businesses to adapt and thrive in a rapidly evolving digital world by delivering innovative, reliable, and scalable technology solutions. We are committed to driving digital transformation through cutting-edge technologies, strategic partnerships, and customer-centric solutions that enhance efficiency, productivity, and growth. By fostering innovation, continuous learning, and excellence, we aim to equip businesses with the tools and knowledge they need to stay ahead in an ever-changing global landscape.
+                    </p>
+                    <p class="fs-6 fs-md-5 text-muted text-center text-lg-start">
+                        We believe in leveraging emerging technologies such as artificial intelligence, cloud computing, and cybersecurity to create sustainable and future-proof solutions. Our goal is to bridge the gap between technology and business needs, ensuring seamless integration and maximum impact. Through collaboration, integrity, and a passion for progress, we strive to create an ecosystem where businesses not only survive but thrive in the digital era.
+                    </p>
+                </div>
             </div>
-            <div class="col-lg-6">
-                <img src="{% get_media_prefix %}images/bg.png" alt="Team Member" class="card-img-top rounded-top">
+            <!-- Image Column -->
+            <div class="col-lg-6 col-md-12 text-center">
+                <img src="{% get_media_prefix %}images/bg.png" 
+                     alt="Our Team" 
+                     class="img-fluid rounded shadow-sm"
+                     style="max-height: 400px; object-fit: cover; width: 100%;">
             </div>
         </div>
     </div>
@@ -23,63 +38,57 @@
 <section class="bg-light py-5">
     <div class="container">
         <h2 class="text-center fw-bold text-primary mb-5">Our Core Values</h2>
-        <div class="row text-center">
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm border-0 rounded p-4">
-                    <i class="fas fa-users-cog fa-4x mb-3 text-primary"></i>
+        <div class="row g-4">
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="card shadow-sm border-0 rounded p-4 text-center h-100">
+                    <i class="fas fa-users-cog fa-3x mb-3 text-primary"></i>
                     <h4 class="fw-bold text-primary">Innovation</h4>
-                    <p class="text-muted">We believe in the power of innovation to transform industries and create new opportunities for our clients.</p>
+                    <p class="text-muted small">We believe in the power of innovation to transform industries and create new opportunities for our clients.</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm border-0 rounded p-4">
-                    <i class="fas fa-handshake fa-4x mb-3 text-primary"></i>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="card shadow-sm border-0 rounded p-4 text-center h-100">
+                    <i class="fas fa-handshake fa-3x mb-3 text-primary"></i>
                     <h4 class="fw-bold text-primary">Collaboration</h4>
-                    <p class="text-muted">We work closely with our clients, fostering collaboration to create solutions that truly meet their needs.</p>
+                    <p class="text-muted small">We work closely with our clients, fostering collaboration to create solutions that truly meet their needs.</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm border-0 rounded p-4">
-                    <i class="fas fa-rocket fa-4x mb-3 text-primary"></i>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="card shadow-sm border-0 rounded p-4 text-center h-100">
+                    <i class="fas fa-rocket fa-3x mb-3 text-primary"></i>
                     <h4 class="fw-bold text-primary">Excellence</h4>
-                    <p class="text-muted">Our commitment to excellence drives us to deliver high-quality, reliable solutions every time.</p>
+                    <p class="text-muted small">Our commitment to excellence drives us to deliver high-quality, reliable solutions every time.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-
 
 <!-- Testimonials Section -->
 <section class="bg-light py-5">
     <div class="container">
         <h2 class="text-center fw-bold text-primary mb-5">What Our Clients Say</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm border-0 rounded p-4 text-center">
-                    <p class="text-muted">MUBAKU Holdings helped us transform our entire digital strategy. Their team is knowledgeable and easy to work with.</p>
-                    <p class="fw-bold">Malle Steve</p>
-                    <p class="text-muted">CEO, Lobe Games Coop</p>
+        <div class="row g-4">
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="card shadow-sm border-0 rounded p-4 text-center h-100">
+                    <p class="text-muted small">MUBAKU Holdings helped us transform our entire digital strategy. Their team is knowledgeable and easy to work with.</p>
+                    <p class="fw-bold">Yes Cameroon</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm border-0 rounded p-4 text-center">
-                    <p class="text-muted">The team at MUBAKU are experts in their field. They provided us with a solution that perfectly fits our needs.</p>
-                    <p class="fw-bold">Sarah Kalunga</p>
-                    <p class="text-muted">Managing Director, Trade Fare</p>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="card shadow-sm border-0 rounded p-4 text-center h-100">
+                    <p class="text-muted small">The team at MUBAKU are experts in their field. They provided us with a solution that perfectly fits our needs.</p>
+                    <p class="fw-bold">One Stop Business Solution</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm border-0 rounded p-4 text-center">
-                    <p class="text-muted">Their strategic approach to digital transformation has given our business a competitive edge in the market.</p>
-                    <p class="fw-bold">David Ebot</p>
-                    <p class="text-muted">Founder, Global Enterprises</p>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="card shadow-sm border-0 rounded p-4 text-center h-100">
+                    <p class="text-muted small">Their strategic approach to digital transformation has given our business a competitive edge in the market.</p>
+                    <p class="fw-bold">Ztad Bamenda</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 
 {% endblock %}

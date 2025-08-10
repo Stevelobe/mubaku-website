@@ -4,11 +4,13 @@
 
 <style>
     body {
-        background-image: url("{% get_media_prefix %}images/3.jpg");
+        /* background-image: url("{% get_media_prefix %}images/3.jpg"); */
+        /* Background image removed as requested */
+        background-color: transparent;  /* or set a color if needed */
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 100vh;
+        /* Removed fixed height here to avoid conflicts */
         color: white;
         font-family: 'Arial', sans-serif;
     }
@@ -28,8 +30,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        padding: 50px 0;
+        /* Removed fixed height */
+        /* height: 100vh; */
+        padding: 80px 0;
+        min-height: 70vh;
+        box-sizing: border-box;
     }
 
     .contact-container {
@@ -169,13 +174,13 @@
 
     .fab.fa-linkedin:hover {
         color: #0077b5; /* LinkedIn Blue */
+    }
 
-    }    
     .social-media-icons a.fa-tiktok:hover {
         color: #000000;
     }
-
 </style>
+
 <div class="contact-section">
     <div class="contact-container">
         <h1>Contact Us</h1>
@@ -217,4 +222,5 @@
         </div>
     </div>
 </div>
+
 {% endblock %}

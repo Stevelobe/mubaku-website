@@ -2,14 +2,15 @@
 {% block content %}
 {% load static %}
 <section class="services-section">
-        
+    
     <style>
-        /* Background styling */
+        /* Removed background image from body */
         body {
-            background-image: url("{% get_media_prefix %}images/3.jpg");
+            /* background-image: url("{% get_media_prefix %}images/3.jpg"); */
+            background-color: white;  /* plain background */
             background-size: cover;
             background-position: center;
-            background-repeat: repeat;
+            background-repeat: no-repeat;
             height: 100%;
             margin: 0;
             padding: 0;
@@ -140,8 +141,6 @@
                 <!-- Image Content -->
                 <div class="col-md-6 image-box animate-right">
                     <img src="{{ request.scheme }}://{{ request.get_host }}/media/images/bg.png" alt="Business Introduction" class="img-fluid rounded shadow">
-
-
                 </div>
             </div>
         </div>
@@ -262,5 +261,5 @@
     document.addEventListener("scroll", revealOnScroll);
     window.addEventListener("load", revealOnScroll); // Ensure it runs on initial load
 </script>
-    </section>
+</section>
 {% endblock %}
